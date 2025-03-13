@@ -1,0 +1,1 @@
+should be in folder ./clip-vit-large-patch14
