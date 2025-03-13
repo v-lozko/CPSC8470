@@ -1,0 +1,1 @@
+downloaded images go here in ./train2017 (will be 118k images)
