@@ -24,7 +24,6 @@ def run_ann_search(name_dataset, name_embedding, format_file, dataset_path,docum
     print("Running ANN Search with the following command:")
     print(" ".join(command))
     
-    # Execute the command
     subprocess.run(command)
 
 if __name__ == "__main__":
