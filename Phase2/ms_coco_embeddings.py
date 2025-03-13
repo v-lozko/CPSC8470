@@ -90,17 +90,17 @@ D, I = index.search(query_embeddings, top_k)  # `I` contains indices of nearest 
 
 #Split Queries into Train (60%), Validation (20%), and Test (20%)
 print("Splitting queries into train (60%), validation (20%), and test (20%)...")
-# Step 1: First split queries into train (60%) and remaining (40%)
+#First split queries into train (60%) and remaining (40%)
 train_queries, remaining_queries, train_idx, remaining_idx = train_test_split(
     query_embeddings, np.arange(len(query_embeddings)), test_size=0.4, random_state=42
 )
 
-# Step 2: Split remaining into validation (20%) and test (20%)
+#Split remaining into validation (20%) and test (20%)
 valid_queries, test_queries, valid_idx, test_idx = train_test_split(
     remaining_queries, remaining_idx, test_size=0.5, random_state=42
 )
 
-# Step 3: Assign nearest neighbors correctly
+#Assign nearest neighbors correctly
 train_neighbors = I[train_idx]
 valid_neighbors = I[valid_idx]
 test_neighbors = I[test_idx]
